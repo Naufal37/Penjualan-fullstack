@@ -1,0 +1,16 @@
+{
+  "name": "jajan-pasar",
+  "version": "1.0.0",
+  "description": "Website penjualan jajanan pasar rumahan (Node.js + Neon PostgreSQL)",
+  "type": "module",
+  "scripts": {
+    "dev": "node api/index.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

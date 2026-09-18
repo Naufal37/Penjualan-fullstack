@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jajan Pasar Rumahan — kue basah & gorengan matang tiap subuh</title>
+<meta name="description" content="Onde-onde, putu ayu, donat, dan gorengan buatan rumah. Pesan lewat WhatsApp, ambil pagi-pagi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wadah">
+    <span id="bar-alamat">Dijual di rumah, sekitar sini bisa diantar</span>
+    <a href="/admin.html">Halaman pemilik</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wadah">
+    <div class="merek">
+      <strong id="nama-toko">Jajan Pasar</strong>
+      <span>kue basah &amp; gorengan rumahan</span>
+    </div>
+    <div class="isi-hero">
+      <div>
+        <h1>Dikukus dan digoreng subuh, biasanya habis sebelum siang.</h1>
+        <p>Onde-onde, putu ayu, donat, sampai gorengan hangat. Semua dibuat sendiri di rumah tiap hari, bukan stok kemarin.</p>
+        <div class="aksi-hero">
+          <a class="tombol" href="#menu">Lihat jajan hari ini</a>
+          <a class="tombol garis" href="#cara">Cara pesan</a>
+        </div>
+        <p class="catatan-hari" id="catatan-hari" hidden></p>
+      </div>
+      <div class="tumpuk-foto" id="tumpuk-foto"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="bagian" id="menu">
+    <div class="wadah">
+      <div class="kepala-bagian">
+        <div>
+          <h2>Jajan hari ini</h2>
+          <p>Pilih dulu jumlahnya, nanti daftar pesanan langsung terkirim ke WhatsApp.</p>
+        </div>
+      </div>
+      <div class="filter" id="filter"></div>
+      <div class="daftar" id="daftar">
+        <div class="kosong-pesan">Sedang memuat jajan…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bagian kertas" id="cara">
+    <div class="wadah">
+      <div class="kepala-bagian"><h2>Cara pesan</h2></div>
+      <div class="langkah">
+        <ol>
+          <li>
+            <span class="no">1</span>
+            <h3>Pilih jajannya</h3>
+            <p>Tekan tombol tambah di jajan yang mau dibeli. Jumlahnya bebas.</p>
+          </li>
+          <li>
+            <span class="no">2</span>
+            <h3>Kirim lewat WhatsApp</h3>
+            <p>Tombol pesanan muncul di bawah layar. Isi pesannya sudah otomatis, tinggal kirim.</p>
+          </li>
+          <li>
+            <span class="no">3</span>
+            <h3>Ambil atau diantar</h3>
+            <p>Bayar tunai waktu ambil. Untuk yang dekat rumah, bisa diantar pagi.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="bagian">
+    <div class="wadah cerita">
+      <div>
+        <h2>Dibuat di dapur rumah, bukan pabrik</h2>
+        <p>Adonannya diuleni malam, dikukus dan digoreng mulai jam tiga pagi. Isian kacang hijau dimasak sendiri, kelapa diparut hari itu juga, dan tidak pakai pengawet — makanya enaknya dimakan hari yang sama.</p>
+        <p>Jajan ini dititipkan juga di warung gorengan nenek, jadi kalau kehabisan di sini biasanya masih ada di sana.</p>
+      </div>
+      <blockquote class="kutipan">
+        “Yang penting matang pas pagi, biar orang berangkat kerja masih hangat.”
+        <footer>— yang masak tiap subuh</footer>
+      </blockquote>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wadah kolom">
+    <div>
+      <h3 id="footer-nama">Jajan Pasar</h3>
+      <p id="footer-alamat"></p>
+    </div>
+    <div>
+      <h3>Pesan</h3>
+      <p>WhatsApp: <a id="footer-wa" href="#">—</a></p>
+      <p>Buka tiap hari, mulai jam 5 pagi sampai habis.</p>
+    </div>
+    <div>
+      <h3>Halaman ini</h3>
+      <p>Dibuat untuk tugas promosi usaha. Daftar jajan dan fotonya diatur lewat <a href="/admin.html">halaman pemilik</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="bar-pesan" id="bar-pesan">
+  <div class="ringkas">
+    <strong id="bar-total">Rp0</strong>
+    <span id="bar-item">0 item dipilih</span>
+  </div>
+  <a class="tombol" id="bar-kirim" href="#">Pesan lewat WhatsApp</a>
+</div>
+
+<script src="/js/toko.js"></script>
+</body>
+</html>

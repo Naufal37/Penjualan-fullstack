@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halaman pemilik — atur jajan</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin">
+
+<div class="topbar">
+  <div class="wadah">
+    <span>Halaman pemilik</span>
+    <a href="/">Lihat toko</a>
+  </div>
+</div>
+
+<!-- ================= login ================= -->
+<section class="wadah kotak-login" id="layar-login">
+  <h1>Masuk dulu</h1>
+  <p>Halaman ini untuk menambah jajan dan mengunggah fotonya.</p>
+  <label for="sandi">Password pemilik</label>
+  <input type="password" id="sandi" autocomplete="current-password">
+  <button class="tombol" id="tombol-masuk">Masuk</button>
+  <p class="galat" id="galat-login" hidden></p>
+</section>
+
+<!-- ================= panel ================= -->
+<main class="wadah panel" id="layar-panel" hidden>
+
+  <div class="kepala-panel">
+    <h1>Atur jajan</h1>
+    <button class="tombol garis gelap" id="tombol-keluar">Keluar</button>
+  </div>
+
+  <div class="dua-kolom">
+    <!-- form produk -->
+    <section class="kartu-panel">
+      <h2 id="judul-form">Tambah jajan</h2>
+
+      <label for="f-nama">Nama jajan</label>
+      <input id="f-nama" placeholder="Onde-onde">
+
+      <div class="baris">
+        <div>
+          <label for="f-kategori">Kategori</label>
+          <input id="f-kategori" list="daftar-kategori" placeholder="Kue basah">
+          <datalist id="daftar-kategori">
+            <option value="Kue basah"></option>
+            <option value="Gorengan"></option>
+            <option value="Donat"></option>
+            <option value="Minuman"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="f-harga">Harga (Rp)</label>
+          <input id="f-harga" type="number" min="0" step="500" placeholder="2000">
+        </div>
+      </div>
+
+      <label for="f-satuan">Satuan</label>
+      <input id="f-satuan" placeholder="per biji">
+
+      <label for="f-deskripsi">Keterangan singkat</label>
+      <textarea id="f-deskripsi" rows="2" placeholder="Isi kacang hijau, digoreng pagi."></textarea>
+
+      <label for="f-foto">Foto jajan</label>
+      <input id="f-foto" type="file" accept="image/*">
+      <p class="bantuan">Foto otomatis dikecilkan sebelum disimpan ke database, jadi aman walau motret pakai HP.</p>
+      <div class="pratinjau" id="pratinjau" hidden>
+        <img id="pratinjau-img" alt="Pratinjau foto">
+        <button type="button" class="hapus-foto" id="hapus-foto">Hapus foto</button>
+      </div>
+
+      <label class="centang"><input type="checkbox" id="f-tersedia" checked> Masih tersedia hari ini</label>
+
+      <div class="aksi-form">
+        <button class="tombol" id="tombol-simpan">Simpan jajan</button>
+        <button class="tombol garis gelap" id="tombol-batal" hidden>Batal edit</button>
+      </div>
+      <p class="galat" id="galat-form" hidden></p>
+    </section>
+
+    <!-- pengaturan toko -->
+    <section class="kartu-panel">
+      <h2>Info toko</h2>
+      <label for="s-nama">Nama toko</label>
+      <input id="s-nama">
+      <label for="s-wa">Nomor WhatsApp (format 62…)</label>
+      <input id="s-wa" placeholder="6281234567890">
+      <label for="s-alamat">Alamat / lokasi jualan</label>
+      <input id="s-alamat">
+      <label for="s-catatan">Catatan yang tampil di halaman depan</label>
+      <textarea id="s-catatan" rows="2"></textarea>
+      <div class="aksi-form">
+        <button class="tombol" id="tombol-simpan-info">Simpan info toko</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="kartu-panel">
+    <h2>Daftar jajan</h2>
+    <div id="tabel-produk"></div>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>
